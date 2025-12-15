@@ -78,7 +78,7 @@ import collections
 #     if (word):
 #         print(word.decode() + ":\t\t" + count)
 
-conf = SparkConf().setMaster("local").setAppName("TotalAmountSpent")
+conf = SparkConf().setMaster("local[*]").setAppName("TotalAmountSpent")
 sc = SparkContext(conf=conf)
 
 def totamt(line):
